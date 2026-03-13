@@ -4,10 +4,10 @@ metadata:
   name: app-team-base
   namespace: flux-system
 spec:
-  interval: 60ss
+  interval: 60s
   sourceRef:
     kind: GitRepository
-    name: fluxcd
+    name: flux-system
     namespace: flux-system
   path: ./apps/team-base
   prune: true
