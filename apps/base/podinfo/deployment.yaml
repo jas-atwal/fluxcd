@@ -13,9 +13,16 @@ spec:
     spec:
       containers:
         - name: podinfod
-          image: ghcr.io/stefanprodan/podinfo:6.5.4 # {"$imagepolicy": "flux-system:podinfo"}
+          image: ghcr.io/stefanprodan/podinfo:6.5.4
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 9898
               protocol: TCP
+          resources:
+            limits:
+              cpu: 100m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
