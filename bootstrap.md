@@ -15,9 +15,9 @@ The flux bootstrap github command deploys the Flux controllers on a Kubernetes c
   --owner=jas-atwal \
   --repository=fluxcd \
   --branch=main \
-  --path=/clusters/production \
-  --personal
-  --private=false
+  --path=/clusters/staging \
+  --personal \
+  --private=false \
   --componenets-extra='image-reflector-controller, image-automation-controller'`
 
 # Check flexcd pods are running
